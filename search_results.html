@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        .custom-navbar-height {
+            height: 150px;
+            /* 這裡設置你想要的高度 */
+        }
+
+        .navbar-brand img {
+            margin-left: 10px;
+            /* 可選，調整圖片與邊框之間的間距 */
+        }
+
+        .custom-text {
+            position: relative;
+            /* 將文本容器設置為相對定位 */
+            top: 40px;
+            /* 向下移動文本容器內的所有內容 50 像素 */
+            left: 90px;
+            /* 向右移動文本容器內的所有內容 90 像素 */
+            font-size: 40px;
+            /* 設置文本字號為 40 像素 */
+            font-weight: bold;
+            /* 設置文本為粗體 */
+            margin: 20px;
+        }
+
+        .text {
+            left: 90px;
+            /* 向右移動文本容器內的所有內容 90 像素 */
+            font-size: 20px;
+            /* 設置文本字號為 20 像素 */
+            margin-left: 110px;
+            margin-right: 100px;
+            margin-bottom: 100px;
+        }
+
+        .large-image {
+            width: 1300px;
+            /* 設置固定寬度 */
+            height: 850px;
+            /* 設置固定高度 */
+            object-fit: cover;
+            /* 如果圖片比例與容器不符，裁剪圖片以適應容器 */
+        }
+
+        .custom-card-img {
+            height: 300px;
+            object-fit: cover;
+        }
+    </style>
+    <script>
+        // 将搜索关键词保存到 localStorage 并跳转到搜索结果页面
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            localStorage.setItem('searchQuery', query);
+            window.location.href = 'search_results.html';
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar-height">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="pigword.png" width="130"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><strong>喬治</strong></a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">部位</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <li><a class="dropdown-item" href="page1.html">豬耳朵</a></li>
+                            <li><a class="dropdown-item" href="page2.html">梅花肉</a></li>
+                            <li><a class="dropdown-item" href="page3.html">大里肌</a></li>
+                            <li><a class="dropdown-item" href="page4.html">腰內肉</a></li>
+                            <li><a class="dropdown-item" href="page5.html">後腿肉</a></li>
+                            <li><a class="dropdown-item" href="page6.html">蹄膀</a></li>
+                            <li><a class="dropdown-item" href="page7.html">豬腳</a></li>
+                            <li><a class="dropdown-item" href="page8.html">五花肉</a></li>
+                            <li><a class="dropdown-item" href="page9.html">胛心肉</a></li>
+                            <li><a class="dropdown-item" href="page10.html">松阪肉</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">料理</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <li><a class="dropdown-item" href="page11.html">滷煮</a></li>
+                            <li><a class="dropdown-item" href="page12.html">燒烤</a></li>
+                            <li><a class="dropdown-item" href="page13.html">油炸</a></li>
+                            <li><a class="dropdown-item" href="page14.html">醃製</a></li>
+                            <li><a class="dropdown-item" href="page15.html">煎烤</a></li>
+                            <li><a class="dropdown-item" href="page16.html">紅燒</a></li>
+                            <li><a class="dropdown-item" href="page17.html">熱炒</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">品種</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                            <li><a class="dropdown-item" href="page18.html">桃園豬 Taoyuan</a></li>
+                            <li><a class="dropdown-item" href="page19.html">盤克夏 Berkshire</a></li>
+                            <li><a class="dropdown-item" href="page20.html">約克夏 Yorkshire</a></li>
+                            <li><a class="dropdown-item" href="page21.html">藍瑞斯 Landrace</a></li>
+                            <li><a class="dropdown-item" href="page22.html">杜洛克 Duroc</a></li>
+                            <li><a class="dropdown-item" href="page23.html">黑毛豬 Native Black Pig</a></li>
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#georgePigModal">喬治豬 George Pig</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">排名</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                            <li><a class="dropdown-item" href="page24.html">1.約克夏 Yorkshire</a></li>
+                            <li><a class="dropdown-item" href="page25.html">2.杜洛克 Duroc</a></li>
+                            <li><a class="dropdown-item" href="page26.html">3.藍瑞斯 Landrace</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="搜尋" aria-label="搜尋" id="searchInput"
+                        style="width: 200px;"><!-- 根据需要调整宽度 -->
+                    <button class="btn btn-outline-success" type="button" onclick="performSearch()">搜尋</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 通知 -->
+    <div class="modal fade" id="georgePigModal" tabindex="-1" aria-labelledby="georgePigModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="georgePigModalLabel">警告</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    怎麼可以吃喬治
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <h1>搜索結果</h1>
+        <div id="searchResults" class="row"></div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row" id="searchResults">
+            <!-- 搜索结果卡片将在这里显示 -->
+        </div>
+    </div>
+
+    <script>
+        // 示例数据
+        const navItems = [
+            {
+                name: "豬耳朵",
+                link: "page1.html",
+                img: "https://howhowcook.com/data/editor/images/%E5%A5%BD%E5%A5%BD%E7%85%AE%E9%A3%9F/%E8%B1%AC%E8%82%89/%E8%80%B3%E6%9C%B5.jpeg",
+                title: "豬耳朵",
+                text: "豬耳朵是一道經典的菜餚，常用於涼拌或滷煮，口感脆爽，風味獨特。"
+            },
+            {
+                name: "梅花肉",
+                link: "page2.html",
+                img: "https://www.the-best-food.com.tw/uploads/product/202111/202112071742095828.jpg",
+                title: "梅花肉",
+                text: "梅花肉肉質鮮嫩，適合各種料理方式，如燒烤、煎炸等。"
+            },
+            {
+                name: "大里肌",
+                link: "page3.html",
+                img: "https://www.sjpork.com.tw/upload/product/202308081121500.jpg",
+                title: "大里肌",
+                text: "大里肌位於豬腿內側，肉質柔軟、味道鮮美，常用於燉煮、烤肉、炒菜等烹飪方式，是豬肉中的上佳部位之一。"
+            },
+            {
+                name: "腰內肉",
+                link: "page4.html",
+                img: "https://cdn1.cybassets.com/s/files/20213/ckeditor/pictures/content_8dadb3b6-857c-44dc-927a-73b593095773.png",
+                title: "腰內肉",
+                text: "腰內肉位於豬腰部內側，肉質柔軟、口感豐潤，常用於煎、炒、火鍋及涼拌菜，是中式料理中常見且受喜愛的主要食材。。"
+            },
+            {
+                name: "後腿肉",
+                link: "page5.html",
+                img: "https://pic5.sucaisucai.com/14/18/14318005_2.jpg",
+                title: "後腿肉",
+                text: "後腿肉位於豬的後腿部位，肉質結實，適合燉煮、烤、炒等多種烹調方式，常用於製作燉肉、火腿、火鍋料等，口感豐潤且風味鮮美。"
+            },
+            {
+                name: "蹄膀",
+                link: "page6.html",
+                img: "https://www.sjpork.com.tw/upload/product/202307030912050.jpg",
+                title: "蹄膀",
+                text: "豬蹄膀位於腳踝以上，含肌肉、筋膜和脂肪，適合燉煮、燜煮、紅燒等烹調方式，烹調後肉質滑嫩飽滿，常用於紅燒豬蹄、豬腳湯等美食。"
+            },
+            {
+                name: "豬腳",
+                link: "page7.html",
+                img: "https://fs1.shop123.com.tw/400467/upload/product/4004673244pic_outside_fad18c609722.jpg",
+                title: "豬腳",
+                text: "豬腳包括腿部和蹄子，富含膠原蛋白，經燉煮後肉質軟嫩，常用於紅燒、清蒸、炸、燉等烹調方式，並製作豬腳凍等特色菜肴，風味獨特且受歡迎。"
+            },
+            {
+                name: "五花肉",
+                link: "page8.html",
+                img: "https://i3.momoshop.com.tw/1702884919/goodsimg/0010/587/594/10587594_O_m.webp",
+                title: "五花肉",
+                text: "五花肉是豬身上肥瘦分明、肉質柔軟多汁的部位，適合煎、炒、燉、紅燒、燒烤等烹調方式，在中式料理中常用來製作紅燒肉、回鍋肉等經典菜餚，香味濃郁且深受喜愛。"
+            },
+            {
+                name: "胛心肉",
+                link: "page9.html",
+                img: "https://vegeking.com.tw/filecenteraccess/78C010004_vgk0078/2023022210511203397.jpg",
+                title: "胛心肉",
+                text: "胛心肉位於豬背骨中心位置，肉質嫩滑且含適量脂肪，適合煎、烤、炒等烹調方式，常用於火鍋料或涼拌菜，口感豐潤且味道鮮美，深受食客喜愛。"
+            },
+            {
+                name: "松阪豬",
+                link: "page10.html",
+                img: "https://irvine.com.tw/wp-content/uploads/2020/12/%E5%8F%B0%E7%81%A3%E6%9D%BE%E9%98%AA%E8%B1%AC%E5%AE%98%E7%B6%B2%E5%B0%8F%E5%9C%96.%E7%94%9F-1200x900.jpg",
+                title: "松阪豬",
+                text: "豬頸肉，亦稱「黃金六兩肉」或「松阪肉」，以其細嫩多汁的肉質和均勻油花著稱，每隻豬僅產約兩片，因而稀有珍貴，深受高級餐廳和美食家青睞。"
+            },
+            {
+                name: "滷煮",
+                link: "page11.html",
+                img: "https://www.bigkl.com/wp-content/uploads/2022/03/beijing-delicacy-03.webp",
+                title: "滷煮",
+                text: "滷煮是長時間燉煮食物的烹飪方法，適合五花肉、豬腳和豬大腸等豬肉部位，經燉煮後口感濃郁，常見於亞洲家常菜和街頭美食中，受歡迎。"
+            },
+            {
+                name: "燒烤",
+                link: "page12.html",
+                img: "https://www.singskout.com.tw/assets/pic/pct_description_info_15b51748-e90d-11ea-9beb-0025908aa88a.jpg",
+                title: "燒烤",
+                text: "燒烤是直接加熱食物的烹飪方法，適合豬排、梅花肉和豬肋骨等部位，常見於各地聚會，受歡迎。"
+            },
+            {
+                name: "油炸",
+                link: "page13.html",
+                img: "https://i.ytimg.com/vi/KLZUz2sIF84/sddefault.jpg",
+                title: "油炸",
+                text: "油炸是快速烹調食物的方法，使外酥內嫩，常用於製作金黃酥脆的豬排等料理，受歡迎。"
+            },
+            {
+                name: "醃製",
+                link: "page14.html",
+                img: "https://imageproxy.icook.network/resize?background=255%2C255%2C255&height=1200&nocrop=false&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F222479%2F85c12dbb0ce3f9c0.jpg&width=1200",
+                title: "醃製",
+                text: "醃製是用調味料腌製食物以保存和增添風味的方法，常用於豬肩肉、五花肉和後腿肉等部位，是製作培根、火腿等菜餚的重要步驟。"
+            },
+            {
+                name: "煎烤",
+                link: "page15.html",
+                img: "https://tokyo-kitchen.icook.network/uploads/step/cover/2023463/7235e4bb7c61d95c.jpg",
+                title: "煎烤",
+                text: "煎烤是一種烹飪方式，適合豬排、豬里脊和豬肩肉等部位，使外酥內嫩，口感鮮美，是家庭和餐廳廚師常用的簡單方法，帶來美味享受。"
+            },
+            {
+                name: "紅燒",
+                link: "page16.html",
+                img: "https://i.ytimg.com/vi/Wthlx_HP1DU/maxresdefault.jpg",
+                title: "紅燒",
+                text: "紅燒是一種烹飪技巧，常用於燉煮豬肉，以豆醬、醬油等調味料慢燉入味，讓肉質鮮嫩多汁，香氣濃郁，常選用肥瘦相間的肉，如豬腩肉或五花肉。"
+            },
+            {
+                name: "熱炒",
+                link: "page17.html",
+                img: "https://truth.bahamut.com.tw/s01/202108/7b53c8ab5b1916343a2e8ec76065a640.JPG",
+                title: "熱炒",
+                text: "熱炒是一種迅速炒製食材的烹飪方式，常用豬里脊肉、豬肩肉或豬肚肉等部位，肉質細嫩且能吸收風味，風味獨特，廣受喜愛。"
+            },
+            {
+                name: "桃園豬 Taoyuan",
+                link: "page18.html",
+                img: "https://www.angrin.tlri.gov.tw/atlas/Breed/pig/P_T13_02.jpg",
+                title: "桃園豬 Taoyuan",
+                text: "桃園豬、美濃豬、頂雙溪豬為臺灣早期黑豬，現難尋純種。桃園豬於1877年由中國引進，生長時間長且肉量少，已十分罕見。"
+            },
+            {
+                name: "盤克夏 Berkshire",
+                link: "page19.html",
+                img: "https://www.angrin.tlri.gov.tw/atlas/Breed/pig/P_A05_01.jpg",
+                title: "盤克夏 Berkshire",
+                text: "盤克夏（Berkshire）豬，英國源頭，以獨特外貌和優質肉質聞名，廣受全球高級餐廳和美食愛好者追捧。"
+            },
+            {
+                name: "約克夏 Yorkshire",
+                link: "page20.html",
+                img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Yorkshire_pigs_at_animal_sanctuary.jpg/1200px-Yorkshire_pigs_at_animal_sanctuary.jpg",
+                title: "約克夏 Yorkshire",
+                text: "約克夏豬，來自英國，以其豐厚肉質和結實骨骼聞名，19世紀經過品種改良，如今廣泛應用於全球。"
+            },
+            {
+                name: "藍瑞斯 Landrace",
+                link: "page21.html",
+                img: "https://www.angrin.tlri.gov.tw/atlas/Breed/pig/P_A01_01.jpg",
+                title: "藍瑞斯 Landrace",
+                text: "藍瑞斯（Landrace）豬，歐洲古老品種，以優質肉質和高產量聞名，全球廣泛飼養，對現代豬業發展至關重要。"
+            },
+            {
+                name: "杜洛克 Duroc",
+                link: "page22.html",
+                img: "https://www.angrin.tlri.gov.tw/atlas/Breed/pig/P_A03_01.jpg",
+                title: "杜洛克 Duroc",
+                text: "杜洛克（Duroc）豬，源自美國，以卓越肉質和豐富油花聞名，廣受廚師和美食愛好者青睞。"
+            },
+            {
+                name: "黑毛豬 Native Black Pig",
+                link: "page23.html",
+                img: "https://www.hug.com.tw/data/html_image/ca6aec1af0e08e39d401edfe8fdbd439.jpg",
+                title: "黑毛豬 Native Black Pig",
+                text: "黑毛豬，英國傳統品種，以其黑色外觀和優質肉質聞名。近年重新受到關注。"
+            },
+
+
+
+            // ... 其他数据
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const query = localStorage.getItem('searchQuery');
+            if (query) {
+                const results = navItems.filter(item => item.name.toLowerCase().includes(query));
+                let resultHtml = '';
+
+                if (results.length > 0) {
+                    results.forEach(item => {
+                        resultHtml += `
+                            <div class="col-md-4">
+                                <div class="card mb-4">
+                                    <img src="${item.img}" class="card-img-top custom-card-img" alt="${item.name}">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><strong>${item.title}</strong></h5>
+                                        <p class="card-text">${item.text}</p>
+                                        <a href="${item.link}" class="btn btn-primary">查看更多</a>
+                                    </div>
+                                </div>
+                            </div>`;
+                    });
+                } else {
+                    resultHtml = '<p class="text-center">No results found.</p>';
+                }
+
+                document.getElementById('searchResults').innerHTML = resultHtml;
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

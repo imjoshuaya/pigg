@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        .custom-navbar-height {
+            height: 150px;
+            /* 這裡設置你想要的高度 */
+        }
+
+        .navbar-brand img {
+            margin-left: 10px;
+            /* 可選，調整圖片與邊框之間的間距 */
+        }
+
+        .custom-text {
+            position: relative;
+            /* 將文本容器設置為相對定位 */
+            top: 40px;
+            /* 向下移動文本容器內的所有內容 50 像素 */
+            left: 90px;
+            /* 向右移動文本容器內的所有內容 90 像素 */
+            font-size: 40px;
+            /* 設置文本字號為 40 像素 */
+            font-weight: bold;
+            /* 設置文本為粗體 */
+            margin: 20px;
+        }
+
+        .text {
+            left: 90px;
+            /* 向右移動文本容器內的所有內容 90 像素 */
+            font-size: 20px;
+            /* 設置文本字號為 20 像素 */
+            margin-left: 110px;
+            margin-right: 100px;
+            margin-bottom: 100px;
+        }
+
+        .large-image {
+            width: 1300px;
+            /* 設置固定寬度 */
+            height: 700px;
+            /* 設置固定高度 */
+            object-fit: cover;
+            /* 如果圖片比例與容器不符，裁剪圖片以適應容器 */
+        }
+    </style>
+    <script>
+        // 将搜索关键词保存到 localStorage 并跳转到搜索结果页面
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            localStorage.setItem('searchQuery', query);
+            window.location.href = 'search_results.html';
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar-height">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="pigword.png" width="130"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><strong>喬治</strong></a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">部位</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <li><a class="dropdown-item" href="page1.html">豬耳朵</a></li>
+                            <li><a class="dropdown-item" href="page2.html">梅花肉</a></li>
+                            <li><a class="dropdown-item" href="page3.html">大里肌</a></li>
+                            <li><a class="dropdown-item" href="page4.html">腰內肉</a></li>
+                            <li><a class="dropdown-item" href="page5.html">後腿肉</a></li>
+                            <li><a class="dropdown-item" href="page6.html">蹄膀</a></li>
+                            <li><a class="dropdown-item" href="page7.html">豬腳</a></li>
+                            <li><a class="dropdown-item" href="page8.html">五花肉</a></li>
+                            <li><a class="dropdown-item" href="page9.html">胛心肉</a></li>
+                            <li><a class="dropdown-item" href="page10.html">松阪肉</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">料理</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <li><a class="dropdown-item" href="page11.html">滷煮</a></li>
+                            <li><a class="dropdown-item" href="page12.html">燒烤</a></li>
+                            <li><a class="dropdown-item" href="page13.html">油炸</a></li>
+                            <li><a class="dropdown-item" href="page14.html">醃製</a></li>
+                            <li><a class="dropdown-item" href="page15.html">煎烤</a></li>
+                            <li><a class="dropdown-item" href="page16.html">紅燒</a></li>
+                            <li><a class="dropdown-item" href="page17.html">熱炒</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">品種</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                            <li><a class="dropdown-item" href="page18.html">桃園豬 Taoyuan</a></li>
+                            <li><a class="dropdown-item" href="page19.html">盤克夏 Berkshire</a></li>
+                            <li><a class="dropdown-item" href="page20.html">約克夏 Yorkshire</a></li>
+                            <li><a class="dropdown-item" href="page21.html">藍瑞斯 Landrace</a></li>
+                            <li><a class="dropdown-item" href="page22.html">杜洛克 Duroc</a></li>
+                            <li><a class="dropdown-item" href="page23.html">黑毛豬 Native Black Pig</a></li>
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#georgePigModal">喬治豬 George Pig</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">排名</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                            <li><a class="dropdown-item" href="page24.html">1.約克夏 Yorkshire</a></li>
+                            <li><a class="dropdown-item" href="page25.html">2.杜洛克 Duroc</a></li>
+                            <li><a class="dropdown-item" href="page26.html">3.藍瑞斯 Landrace</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="搜尋" aria-label="搜尋" id="searchInput"
+                        style="width: 200px;"><!-- 根据需要调整宽度 -->
+                    <button class="btn btn-outline-success" type="button" onclick="performSearch()">搜尋</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 通知 -->
+    <div class="modal fade" id="georgePigModal" tabindex="-1" aria-labelledby="georgePigModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="georgePigModalLabel">警告</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    怎麼可以吃喬治
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 標題 -->
+    <div class="custom-text">
+        <p>約克夏 Yorkshire</p>
+    </div>
+    <!-- 圖片 -->
+    <div class="container my-5">
+        <div class="row justify-content-center"> <!-- 使用 Bootstrap 的水平置中類 -->
+            <div class="col-auto">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Yorkshire_pigs_at_animal_sanctuary.jpg/1200px-Yorkshire_pigs_at_animal_sanctuary.jpg"
+                    class="large-image" alt="Large Rectangle">
+            </div>
+        </div>
+    </div>
+
+    <!-- 內文 -->
+    <div class="text">
+        <p>約克夏（Yorkshire）豬是英國豬品種之一，其名稱源自英格蘭北部的約克郡。這種豬以其肉質豐厚、骨骼結實而聞名，常見的特徵是直立的耳朵和長而直的身軀。約克夏豬以其出色的生長速度和高產量的肉質而受到青睞，並在農場中廣泛飼養。歷史上，約克夏豬是在19世紀透過當地優秀的畜牧品種進行改良而形成。今天，它作為優質的肉豬品種，在全球范圍內受到廣泛重視和應用。
+        </p>
+
+        <!-- Repeat the above div with different card contents for the other images -->
+    </div>
+    </div>
+
+
+
+    <footer class="bg-dark py-3 ">
+        <div class="container ">
+            <p class="text-light m-0 text-start  "></p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
